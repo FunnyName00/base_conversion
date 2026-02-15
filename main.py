@@ -14,7 +14,7 @@ def binTo10(number):
 
     return final
 
-def decimaloBinary(number):
+def decimalToBinary(number):
     """
     Function to convert from a decimal int -> binary int
     
@@ -43,4 +43,4 @@ def lstToInt(lst):
     return int(final)
 
 print(binTo10(11011110))  #-> 222  
-print(decimaloBinary(222))  #-> 11011110
+print(decimalToBinary(222))  #-> 11011110
