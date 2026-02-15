@@ -20,15 +20,17 @@ def decimalToBinary(number):
     
     :param number: int
     """
-
-    temp = []
-    while number >=1:
-        temp.append(number % 2)
-        number = number // 2
-    temp.reverse()
+    try:
+        temp = []
+        while number >=1:
+            temp.append(number % 2)
+            number = number // 2
+        temp.reverse()
+        
+        return lstToInt(temp)
     
-    return lstToInt(temp)
-
+    except TypeError:
+        return -1
 def lstToInt(lst):
     """
     Makes a integer by concatenating elements of lst
@@ -36,11 +38,12 @@ def lstToInt(lst):
     
     :param lst: List
     """
-    final = ""
-    for i in range(len(lst)):
-        final+=str(lst[i])
 
-    return int(final)
+    try:
+        final = ""
+        for i in range(len(lst)):
+            final+=str(lst[i])
 
-print(binTo10(11011110))  #-> 222  
-print(decimalToBinary(222))  #-> 11011110
+        return int(final)
+    except:
+        return -1
